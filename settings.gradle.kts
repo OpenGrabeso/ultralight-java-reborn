@@ -19,6 +19,7 @@ fun addModule(name: String) {
 }
 
 addExample("glfw")
+addExample("simple")
 addExample("javascript")
 addExample("png")
 
