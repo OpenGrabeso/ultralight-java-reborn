@@ -22,7 +22,7 @@ public class SimpleExample {
                 WebController webController = new WebController(windowController);
         ) {
             WebWindow window = webController.createWindow(1280, 720, "Ultralight Java Reborn GLFW Example");
-            window.getView().loadURL("https://google.com");
+            window.getView().loadURL("https://www.orbisfabula.com");
 
             double maxUpdateTime = 1.0 / 50.0;
 

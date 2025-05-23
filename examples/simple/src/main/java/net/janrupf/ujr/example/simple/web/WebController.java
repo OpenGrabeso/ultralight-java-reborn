@@ -51,7 +51,7 @@ public class WebController implements AutoCloseable {
 
         platform.setConfig(
                 new UltralightConfigBuilder()
-                        .cachePath(System.getProperty("java.io.tmpdir") + File.separator + "ujr-example-glfw")
+                        .cachePath(System.getProperty("java.io.tmpdir") + File.separator + "ujr-example-simple")
                         // Set a custom prefix to distinguish from other file systems
                         .resourcePathPrefix(FilesystemBridge.RESOURCE_PREFIX)
                         .build());
