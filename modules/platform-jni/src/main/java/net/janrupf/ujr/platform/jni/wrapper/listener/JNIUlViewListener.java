@@ -57,12 +57,20 @@ public class JNIUlViewListener {
             boolean isPopup,
             IntRect popupRect
     ) {
-        return (JNIUlView) delegate.onCreateChildView(view, openerUrl, targetUrl, isPopup, popupRect).getImplementation();
+        UltralightView childView = delegate.onCreateChildView(view, openerUrl, targetUrl, isPopup, popupRect);
+        if (childView == null) {
+            return null;
+        }
+        return (JNIUlView) childView.getImplementation();
     }
 
     @NativeAccess
     public JNIUlView onCreateInspectorView(UltralightView view, boolean isLocal, String inspectedUrl) {
-        return (JNIUlView) delegate.onCreateInspectorView(view, isLocal, inspectedUrl).getImplementation();
+        UltralightView inspectorView = delegate.onCreateInspectorView(view, isLocal, inspectedUrl);
+        if (inspectorView == null) {
+            return null;
+        }
+        return (JNIUlView) inspectorView.getImplementation();
     }
 
     @NativeAccess
